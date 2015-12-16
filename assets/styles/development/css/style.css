@@ -1,0 +1,142 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+a,
+a:active,
+a:focus,
+button,
+button:active,
+button:focus {
+  outline: 0; }
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Global reset-RESET */
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+a img {
+  border: none; }
+
+/* HEADERS
+=================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  color: #fff; }
+
+h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  letter-spacing: -.1rem;
+  line-height: 1;
+  margin-bottom: 1rem; }
+
+/* STANDARD TEXT
+=================================== */
+/* LINKS
+=================================== */
+/* SELECTED TEXT
+=================================== */
+/* GLOBAL
+=================================== */
+* {
+  box-sizing: border-box; }
+
+section,
+header,
+footer
+div {
+  position: relative;
+  overflow: hidden; }
+
+.wrapper {
+  min-width: 320px; }
+
+section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 600px;
+  height: 100vh; }
+
+#sufjan {
+  background-image: url("../../images/sufjan-2.jpg"); }
+
+#staves {
+  background-image: url("../../images/staves.jpg"); }
+
+#tame-impala {
+  background-image: url("../../images/tame-impala-6.jpg"); }
+
+#umo {
+  background-image: url("../../images/umo.jpg"); }
+
+#courtney {
+  background-image: url("../../images/courtney.jpg"); }
+
+#alabama-shakes {
+  background-image: url("../../images/alabama-shakes-4.jpg"); }
+
+#hop-along {
+  background-image: url("../../images/hop-along.jpg"); }
+
+#julien {
+  background-image: url("../../images/julien.jpg"); }
+
+#waxahatchee {
+  background-image: url("../../images/waxahatchee-2.jpg"); }
+
+.content {
+  position: absolute;
+  width: 30%;
+  left: 5%;
+  bottom: 10%; }

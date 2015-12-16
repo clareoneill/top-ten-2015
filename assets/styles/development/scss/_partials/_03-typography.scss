@@ -1,0 +1,77 @@
+// body {
+//   font-family: $font-01;
+//   font-size: 18px;
+//   line-height: 1.8;
+//   font-weight: 400;
+//   text-transform: lowercase;
+//   color: $color-01;
+// }
+
+
+/* HEADERS
+=================================== */
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+}
+
+// h1 {
+//   font-size: 1.4rem;
+//   margin-bottom: 2rem;
+// }
+
+h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  // font-style: italic;
+  letter-spacing: -.1rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+// h3 {
+//   line-height: 1.4;
+//   // margin-bottom: .4rem;
+// }
+
+
+/* STANDARD TEXT
+=================================== */
+// p {
+// 	margin: 0 0 1rem 0;
+
+//   &:last-of-type {
+//     margin-bottom: 0;
+//   }
+// }
+
+
+/* LINKS
+=================================== */
+// a,
+// a:link {
+//   text-decoration: none;
+//   color: $color-02;
+//   border-bottom: 2px solid $color-02;
+//   transition: all 300ms ease;
+
+//   &.active {
+//     color: $color-04;
+//     border-bottom: 2px solid $color-04;
+//   }
+// }
+
+// a:active,
+// a:hover,
+// a:focus {
+//   color: $color-04;
+//   border-bottom: 2px solid $color-04;
+// }
+
+
+/* SELECTED TEXT
+=================================== */
+// ::selection {
+//   color: #fff;
+//   background: $color-04;
+// }

@@ -1,0 +1,68 @@
+/* GLOBAL
+=================================== */
+* {
+	box-sizing: border-box;
+}
+
+section,
+header,
+footer
+div {
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper {
+  min-width: 320px;
+}
+
+section {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 600px;
+  height: 100vh;
+}
+
+#sufjan {
+  background-image: url('../../images/sufjan-2.jpg');
+}
+
+#staves {
+  background-image: url('../../images/staves.jpg');
+}
+
+#tame-impala {
+  background-image: url('../../images/tame-impala-6.jpg');
+}
+
+#umo {
+  background-image: url('../../images/umo.jpg');
+}
+
+#courtney {
+  background-image: url('../../images/courtney.jpg');
+}
+
+#alabama-shakes {
+  background-image: url('../../images/alabama-shakes-4.jpg');
+}
+
+#hop-along {
+  background-image: url('../../images/hop-along.jpg');
+}
+
+#julien {
+  background-image: url('../../images/julien.jpg');
+}
+
+#waxahatchee {
+  background-image: url('../../images/waxahatchee-2.jpg');
+}
+
+.content {
+  position: absolute;
+  width: 30%;
+  left: 5%;
+  bottom: 10%;
+}
