@@ -67,25 +67,87 @@ em {
 a img {
   border: none; }
 
+body {
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  color: #fff; }
+
 /* HEADERS
 =================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
-  color: #fff; }
+  font-family: 'Playfair Display', serif; }
 
-h2 {
+h1,
+.thx {
   font-size: 5rem;
   font-weight: 900;
+  letter-spacing: -.2rem;
+  line-height: .8;
+  margin-bottom: 2rem;
+  text-transform: lowercase; }
+  @media (min-width: 600px) {
+    h1,
+    .thx {
+      font-size: 8rem;
+      letter-spacing: -.5rem; } }
+
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
   letter-spacing: -.1rem;
-  line-height: 1;
-  margin-bottom: 1rem; }
+  line-height: .85;
+  margin-bottom: 1.5rem;
+  text-transform: lowercase;
+  display: inline-block; }
+  @media (min-width: 600px) {
+    h2 {
+      font-size: 5rem;
+      letter-spacing: -.2rem; } }
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  display: inline-block; }
 
 /* STANDARD TEXT
 =================================== */
+p {
+  margin-bottom: 1rem; }
+  p:last-of-type {
+    margin-bottom: 0; }
+
+.thx {
+  font-family: 'Playfair Display', serif; }
+
 /* LINKS
 =================================== */
+a,
+a:link {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms ease; }
+
+a:active,
+a:hover,
+a:focus {
+  color: #cc99ff;
+  border-bottom: 2px solid #cc99ff; }
+
 /* SELECTED TEXT
 =================================== */
+::-moz-selection {
+  color: #fff;
+  background: #cc99ff; }
+::selection {
+  color: #fff;
+  background: #cc99ff; }
+
 /* GLOBAL
 =================================== */
 * {
@@ -101,42 +163,106 @@ div {
 .wrapper {
   min-width: 320px; }
 
-section {
+header,
+section,
+footer {
+  min-height: 480px;
+  height: 100vh;
+  overflow: hidden; }
+
+header {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+section .bg {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 600px;
-  height: 100vh; }
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+  section .bg::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); }
+
+.js section,
+.js footer {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2; }
+
+footer {
+  background-color: #000; }
 
 #sufjan {
-  background-image: url("../../images/sufjan-2.jpg"); }
+  margin-top: 100vh; }
+  #sufjan .bg {
+    background-image: url("../../images/sufjan-2.jpg"); }
 
-#staves {
+.js #sufjan {
+  margin-top: 0; }
+
+#staves .bg {
   background-image: url("../../images/staves.jpg"); }
 
-#tame-impala {
+#tame-impala .bg {
   background-image: url("../../images/tame-impala-6.jpg"); }
 
-#umo {
+#umo .bg {
   background-image: url("../../images/umo.jpg"); }
 
-#courtney {
+#courtney .bg {
   background-image: url("../../images/courtney.jpg"); }
 
-#alabama-shakes {
+#alabama-shakes .bg {
   background-image: url("../../images/alabama-shakes-4.jpg"); }
 
-#hop-along {
+#hop-along .bg {
   background-image: url("../../images/hop-along.jpg"); }
 
-#julien {
+#julien .bg {
   background-image: url("../../images/julien.jpg"); }
 
-#waxahatchee {
+#waxahatchee .bg {
   background-image: url("../../images/waxahatchee-2.jpg"); }
+
+.header-content,
+.footer-content {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
 
 .content {
   position: absolute;
-  width: 30%;
-  left: 5%;
-  bottom: 10%; }
+  left: 0;
+  margin: 0 2rem;
+  bottom: 4rem; }
+  @media (min-width: 950px) {
+    .content {
+      width: 40%; } }
+  .content a {
+    border: 0; }
+
+.js .content {
+  bottom: 50%;
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }

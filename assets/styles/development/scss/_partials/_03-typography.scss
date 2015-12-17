@@ -1,77 +1,92 @@
-// body {
-//   font-family: $font-01;
-//   font-size: 18px;
-//   line-height: 1.8;
-//   font-weight: 400;
-//   text-transform: lowercase;
-//   color: $color-01;
-// }
+body {
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  color: #fff;
+}
 
 
 /* HEADERS
 =================================== */
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Playfair Display', serif;
-  color: #fff;
 }
 
-// h1 {
-//   font-size: 1.4rem;
-//   margin-bottom: 2rem;
-// }
-
-h2 {
+h1,
+.thx {
   font-size: 5rem;
   font-weight: 900;
-  // font-style: italic;
-  letter-spacing: -.1rem;
-  line-height: 1;
-  margin-bottom: 1rem;
+  letter-spacing: -.2rem;
+  line-height: .8;
+  margin-bottom: 2rem;
+  text-transform: lowercase;
+
+  @media(min-width: $bp-mpls) {
+    font-size: 8rem;
+    letter-spacing: -.5rem;
+  }
 }
 
-// h3 {
-//   line-height: 1.4;
-//   // margin-bottom: .4rem;
-// }
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -.1rem;
+  line-height: .85;
+  margin-bottom: 1.5rem;
+  text-transform: lowercase;
+  display: inline-block;
+
+  @media(min-width: $bp-mpls) {
+    font-size: 5rem;
+    letter-spacing: -.2rem;
+  }
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  display: inline-block;
+}
 
 
 /* STANDARD TEXT
 =================================== */
-// p {
-// 	margin: 0 0 1rem 0;
-
-//   &:last-of-type {
-//     margin-bottom: 0;
-//   }
-// }
+p {
+  margin-bottom: 1rem;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.thx {
+  font-family: 'Playfair Display', serif;
+}
 
 
 /* LINKS
 =================================== */
-// a,
-// a:link {
-//   text-decoration: none;
-//   color: $color-02;
-//   border-bottom: 2px solid $color-02;
-//   transition: all 300ms ease;
+a,
+a:link {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  transition: all 300ms ease;
+}
 
-//   &.active {
-//     color: $color-04;
-//     border-bottom: 2px solid $color-04;
-//   }
-// }
-
-// a:active,
-// a:hover,
-// a:focus {
-//   color: $color-04;
-//   border-bottom: 2px solid $color-04;
-// }
+a:active,
+a:hover,
+a:focus {
+  color: $color-01;
+  border-bottom: 2px solid $color-01;
+}
 
 
 /* SELECTED TEXT
 =================================== */
-// ::selection {
-//   color: #fff;
-//   background: $color-04;
-// }
+::selection {
+  color: #fff;
+  background: $color-01;
+}
