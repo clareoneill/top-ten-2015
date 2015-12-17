@@ -12,6 +12,8 @@ $(function() {
 	$body.addClass('js');
 	sectionHeight();
 
+	$('html, body').scrollTop(0);
+
 	$win.on('resize', function() {
 		sectionHeight();
 	});
@@ -53,5 +55,12 @@ $(function() {
 
 		$footerPrevAll = $footer.prevAll();
 		$footer.css({'top': $footer.height() * $footerPrevAll.length});
+
+		setTimeout(function() {
+			$('.loading').addClass('hide');
+			$headerContent.fadeIn(800);
+			$sections.show();
+			$footer.show();
+		}, 1000);
 	}
 });

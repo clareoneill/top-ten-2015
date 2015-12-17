@@ -56,11 +56,18 @@ h3 {
 /* STANDARD TEXT
 =================================== */
 p {
+  line-height: 1.5;
   margin-bottom: 1rem;
+
   &:last-of-type {
     margin-bottom: 0;
   }
 }
+
+.loading {
+  margin-top: 2rem;
+}
+
 .thx {
   font-family: 'Playfair Display', serif;
 }
