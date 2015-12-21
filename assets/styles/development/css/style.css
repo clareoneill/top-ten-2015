@@ -216,37 +216,67 @@ footer {
 #sufjan {
   margin-top: 100vh; }
   #sufjan .bg {
-    background-image: url("../../images/sufjan-2.jpg"); }
+    background-image: url("../../images/sufjan-sm.jpg"); }
+  @media (min-width: 480px) {
+    #sufjan {
+      background-image: url("../../images/sufjan.jpg"); } }
 
 .js #sufjan {
   margin-top: 0; }
 
 #staves .bg {
-  background-image: url("../../images/staves.jpg"); }
+  background-image: url("../../images/staves-sm.jpg"); }
+  @media (min-width: 480px) {
+    #staves .bg {
+      background-image: url("../../images/staves.jpg"); } }
 
 #tame-impala .bg {
-  background-image: url("../../images/tame-impala-6.jpg"); }
+  background-image: url("../../images/tame-impala-sm.jpg"); }
+  @media (min-width: 480px) {
+    #tame-impala .bg {
+      background-image: url("../../images/tame-impala.jpg"); } }
 
 #umo .bg {
-  background-image: url("../../images/umo.jpg"); }
+  background-image: url("../../images/umo-sm.jpg"); }
+  @media (min-width: 480px) {
+    #umo .bg {
+      background-image: url("../../images/umo.jpg"); } }
 
 #courtney .bg {
-  background-image: url("../../images/courtney.jpg"); }
+  background-image: url("../../images/courtney-sm.jpg"); }
+  @media (min-width: 480px) {
+    #courtney .bg {
+      background-image: url("../../images/courtney.jpg"); } }
 
 #alabama-shakes .bg {
-  background-image: url("../../images/alabama-shakes-4.jpg"); }
+  background-image: url("../../images/alabama-shakes-sm.jpg"); }
+  @media (min-width: 480px) {
+    #alabama-shakes .bg {
+      background-image: url("../../images/alabama-shakes.jpg"); } }
 
 #hop-along .bg {
-  background-image: url("../../images/hop-along.jpg"); }
+  background-image: url("../../images/hop-along-sm.jpg"); }
+  @media (min-width: 480px) {
+    #hop-along .bg {
+      background-image: url("../../images/hop-along.jpg"); } }
 
 #julien .bg {
-  background-image: url("../../images/julien.jpg"); }
+  background-image: url("../../images/julien-sm.jpg"); }
+  @media (min-width: 480px) {
+    #julien .bg {
+      background-image: url("../../images/julien.jpg"); } }
 
 #speedy .bg {
-  background-image: url("../../images/speedy.jpg"); }
+  background-image: url("../../images/speedy-sm.jpg"); }
+  @media (min-width: 480px) {
+    #speedy .bg {
+      background-image: url("../../images/speedy.jpg"); } }
 
 #waxahatchee .bg {
-  background-image: url("../../images/waxahatchee-2.jpg"); }
+  background-image: url("../../images/waxahatchee-sm.jpg"); }
+  @media (min-width: 480px) {
+    #waxahatchee .bg {
+      background-image: url("../../images/waxahatchee.jpg"); } }
 
 .header-content,
 .footer-content {

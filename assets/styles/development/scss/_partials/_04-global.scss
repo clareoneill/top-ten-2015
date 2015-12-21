@@ -72,7 +72,11 @@ footer {
   margin-top: 100vh;
 
   .bg {
-    background-image: url('../../images/sufjan-2.jpg');
+    background-image: url('../../images/sufjan-sm.jpg');
+  }
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/sufjan.jpg');
   }
 }
 
@@ -81,40 +85,76 @@ footer {
 }
 
 #staves .bg {
-  background-image: url('../../images/staves.jpg');
+  background-image: url('../../images/staves-sm.jpg');
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/staves.jpg');
+  }
 }
 
 #tame-impala .bg {
-  background-image: url('../../images/tame-impala-6.jpg');
+  background-image: url('../../images/tame-impala-sm.jpg');
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/tame-impala.jpg');
+  }
 }
 
 #umo .bg {
-  background-image: url('../../images/umo.jpg');
+  background-image: url('../../images/umo-sm.jpg');
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/umo.jpg');
+  }
 }
 
 #courtney .bg {
-  background-image: url('../../images/courtney.jpg');
+  background-image: url('../../images/courtney-sm.jpg');
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/courtney.jpg');
+  }
 }
 
 #alabama-shakes .bg {
-  background-image: url('../../images/alabama-shakes-4.jpg');
+  background-image: url('../../images/alabama-shakes-sm.jpg');
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/alabama-shakes.jpg');
+  }
 }
 
 #hop-along .bg {
-  background-image: url('../../images/hop-along.jpg');
+  background-image: url('../../images/hop-along-sm.jpg');
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/hop-along.jpg');
+  }
 }
 
 #julien .bg {
-  background-image: url('../../images/julien.jpg');
+  background-image: url('../../images/julien-sm.jpg');
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/julien.jpg');
+  }
 }
 
 
 #speedy .bg {
-  background-image: url('../../images/speedy.jpg');
+  background-image: url('../../images/speedy-sm.jpg');
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/speedy.jpg');
+  }
 }
 
 #waxahatchee .bg {
-  background-image: url('../../images/waxahatchee-2.jpg');
+  background-image: url('../../images/waxahatchee-sm.jpg');
+
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/waxahatchee.jpg');
+  }
 }
 
 .header-content,
