@@ -73,10 +73,10 @@ footer {
 
   .bg {
     background-image: url('../../images/sufjan-sm.jpg');
-  }
 
-  @media(min-width: $bp-cleveland) {
-    background-image: url('../../images/sufjan.jpg');
+    @media(min-width: $bp-cleveland) {
+      background-image: url('../../images/sufjan.jpg');
+    }
   }
 }
 

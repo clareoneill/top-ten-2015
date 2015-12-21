@@ -217,9 +217,9 @@ footer {
   margin-top: 100vh; }
   #sufjan .bg {
     background-image: url("../../images/sufjan-sm.jpg"); }
-  @media (min-width: 480px) {
-    #sufjan {
-      background-image: url("../../images/sufjan.jpg"); } }
+    @media (min-width: 480px) {
+      #sufjan .bg {
+        background-image: url("../../images/sufjan.jpg"); } }
 
 .js #sufjan {
   margin-top: 0; }
