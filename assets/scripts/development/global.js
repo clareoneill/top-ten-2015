@@ -33,16 +33,24 @@ $(function() {
 		$sections.each(function() {
 			var $s = $(this),
 					$content = $s.find('.content'),
+					$number = $s.find('.number'),
 					offsetTop = $s.offset().top,
 					height = $s.height(),
 					offsetBottom = offsetTop + height,
 					space = parseInt(height * 0.5),
-					scrolled = (winScroll - offsetTop + space) / space * 25;
+					scrolled = (winScroll - offsetTop + space) / space * 25,
+					opacity = (offsetBottom - winScroll) / height / 2;
 
 			if( winScroll >= offsetTop - space && winScroll < offsetBottom ) {
 				$content.css({'bottom': 50 - scrolled + '%'});
+				if( opacity > .5 ) {
+					$number.css({'opacity':'.5'});
+				} else {
+					$number.css({'opacity': opacity});
+				}
 			} else {
 				$content.css({'bottom':'100%'});
+				$number.css({'opacity':'.5'});
 			}
 		});
 	});
@@ -65,12 +73,5 @@ $(function() {
 
 		$footerPrevAll = $footer.prevAll();
 		$footer.css({'top': $footer.height() * $footerPrevAll.length});
-
-		setTimeout(function() {
-			$('.loading').addClass('hide');
-			$headerContent.fadeIn(800);
-			$sections.show();
-			$footer.show();
-		}, 1000);
 	}
 });

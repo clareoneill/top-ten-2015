@@ -4,6 +4,19 @@
 	box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+  animation-name: unlock;
+  animation-duration: 0;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes unlock {
+  from { overflow: hidden; }
+  to { overflow: auto; }
+}
+
 section,
 header,
 footer
@@ -33,6 +46,15 @@ header {
   top: 0;
 }
 
+section,
+footer {
+  opacity: 0;
+  animation-name: fadein;
+  animation-duration: 300ms;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
 section .bg {
   background-size: cover;
   background-position: center;
@@ -56,24 +78,12 @@ section .bg {
   }
 }
 
-.js section,
-.js footer {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  display: none;
-}
-
 footer {
   position: absolute;
   background-color: #000;
 }
 
 #sufjan {
-  margin-top: 100vh;
-
   .bg {
     background-image: url('../../images/sufjan-sm.jpg');
 
@@ -81,10 +91,6 @@ footer {
       background-image: url('../../images/sufjan.jpg');
     }
   }
-}
-
-.js #sufjan {
-  margin-top: 0;
 }
 
 #staves .bg {
@@ -152,11 +158,15 @@ footer {
   }
 }
 
-#waxahatchee .bg {
-  background-image: url('../../images/waxahatchee-sm.jpg');
+#waxahatchee {
+  margin-top: 100vh;
 
-  @media(min-width: $bp-cleveland) {
-    background-image: url('../../images/waxahatchee.jpg');
+  .bg {
+    background-image: url('../../images/waxahatchee-sm.jpg');
+
+    @media(min-width: $bp-cleveland) {
+      background-image: url('../../images/waxahatchee.jpg');
+    }
   }
 }
 
@@ -168,14 +178,14 @@ footer {
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
+  animation-name: fadein;
+  animation-duration: 300ms;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
 }
 
-.js .header-content {
-  display: none;
-
-  &.show {
-    display: block;
-  }
+.header-content {
+  opacity: 0;
 }
 
 .content {
@@ -183,6 +193,7 @@ footer {
   left: 0;
   margin: 0 2rem;
   bottom: 4rem;
+  width: calc(100% - 4rem);
 
   @media(min-width: $bp-tokyo) {
     width: 40%;
@@ -193,22 +204,36 @@ footer {
   }
 }
 
-.js .content {
-  bottom: 50%;
-  position: fixed;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-.loading {
-  display: none;
-}
-
-.js .loading {
+.number {
+  text-align: right;
+  font-family: 'Playfair Display', serif;
+  font-size: 15rem;
+  letter-spacing: -1rem;
+  line-height: 1;
+  font-weight: 900;
   display: block;
+  position: absolute;
+  opacity: .5;
+  right: 2rem;
+  bottom: 4.5rem;
 
-  &.hide {
-    opacity: 0;
+  @media(min-width: $bp-mpls) {
+    font-size: 24rem;
+  }
+
+  @media(min-width: $bp-tokyo) {
+    font-size: 30rem;
+    right: auto;
+    left: 20%;
+  }
+}
+
+.js .number {
+  right: auto;
+  left: 2rem;
+  
+  @media(min-width: $bp-tokyo) {
+    left: 2rem;
   }
 }
 
@@ -220,6 +245,14 @@ footer {
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
   transition: all 800ms ease;
+  animation-name: loading;
+  animation-duration: 300ms;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+
+  &.hide {
+    opacity: 0;
+  }
 
   div {
     width: 66px;
@@ -236,6 +269,11 @@ footer {
     height: 40px;
     background: #fff;
   }
+}
+
+@keyframes loading {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 i:nth-child(1) {
@@ -290,4 +328,33 @@ i:nth-child(5) {
   70% { top: -10px; }
   84% { top: 15px; }
   98% { top: 0; }
+}
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.js {
+  section,
+  footer {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+
+  .content {
+    bottom: 50%;
+    position: fixed;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+
+  #waxahatchee {
+    margin-top: 0;
+  }
 }
