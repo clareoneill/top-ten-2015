@@ -14,7 +14,7 @@ $(function() {
 	$('html, body').scrollTop(0);
 	if( !mobileCheck() ) {
 		$sections.each(function() {
-			$(this).find('.bg').addClass('fixed');
+			$(this).addClass('fixed');
 		});
 	}
 
