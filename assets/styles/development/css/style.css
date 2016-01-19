@@ -178,87 +178,81 @@ footer {
 header {
   background-color: #000; }
 
-section .bg {
-  background-size: cover;
-  background-position: center;
+section::after {
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%; }
-  section .bg::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); }
-  section .bg.fixed {
-    background-attachment: fixed; }
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1; }
+
+section.fixed {
+  background-attachment: fixed; }
 
 footer {
   position: absolute;
   background-color: #000; }
 
-#sufjan .bg {
+#sufjan {
   background-image: url("../../images/sufjan-sm.jpg"); }
   @media (min-width: 480px) {
-    #sufjan .bg {
+    #sufjan {
       background-image: url("../../images/sufjan.jpg"); } }
 
-#staves .bg {
+#staves {
   background-image: url("../../images/staves-sm.jpg"); }
   @media (min-width: 480px) {
-    #staves .bg {
+    #staves {
       background-image: url("../../images/staves.jpg"); } }
 
-#tame-impala .bg {
+#tame-impala {
   background-image: url("../../images/tame-impala-sm.jpg"); }
   @media (min-width: 480px) {
-    #tame-impala .bg {
+    #tame-impala {
       background-image: url("../../images/tame-impala.jpg"); } }
 
-#umo .bg {
+#umo {
   background-image: url("../../images/umo-sm.jpg"); }
   @media (min-width: 480px) {
-    #umo .bg {
+    #umo {
       background-image: url("../../images/umo.jpg"); } }
 
-#courtney .bg {
+#courtney {
   background-image: url("../../images/courtney-sm.jpg"); }
   @media (min-width: 480px) {
-    #courtney .bg {
+    #courtney {
       background-image: url("../../images/courtney.jpg"); } }
 
-#alabama-shakes .bg {
+#alabama-shakes {
   background-image: url("../../images/alabama-shakes-sm.jpg"); }
   @media (min-width: 480px) {
-    #alabama-shakes .bg {
+    #alabama-shakes {
       background-image: url("../../images/alabama-shakes.jpg"); } }
 
-#hop-along .bg {
+#hop-along {
   background-image: url("../../images/hop-along-sm.jpg"); }
   @media (min-width: 480px) {
-    #hop-along .bg {
+    #hop-along {
       background-image: url("../../images/hop-along.jpg"); } }
 
-#julien .bg {
+#julien {
   background-image: url("../../images/julien-sm.jpg"); }
   @media (min-width: 480px) {
-    #julien .bg {
+    #julien {
       background-image: url("../../images/julien.jpg"); } }
 
-#speedy .bg {
+#speedy {
   background-image: url("../../images/speedy-sm.jpg"); }
   @media (min-width: 480px) {
-    #speedy .bg {
+    #speedy {
       background-image: url("../../images/speedy.jpg"); } }
 
-#waxahatchee .bg {
+#waxahatchee {
   background-image: url("../../images/waxahatchee-sm.jpg"); }
   @media (min-width: 480px) {
-    #waxahatchee .bg {
+    #waxahatchee {
       background-image: url("../../images/waxahatchee.jpg"); } }
 
 .header-content,
@@ -485,8 +479,13 @@ i:nth-child(5) {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2; }
+  z-index: 2;
+  clip: rect(0, auto, auto, 0); }
 
 .js .content {
   bottom: 100%;
-  position: fixed; }
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0); }

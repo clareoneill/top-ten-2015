@@ -29,14 +29,7 @@ header {
   background-color: #000;
 }
 
-section .bg {
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  left: 0; top: 0;
-  width: 100%;
-  height: 100%;
-
+section {
   &::after {
     content: '';
     position: absolute;
@@ -45,6 +38,7 @@ section .bg {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.4);
+    z-index: -1;
   }
 
   &.fixed {
@@ -58,16 +52,14 @@ footer {
 }
 
 #sufjan {
-  .bg {
-    background-image: url('../../images/sufjan-sm.jpg');
+  background-image: url('../../images/sufjan-sm.jpg');
 
-    @media(min-width: $bp-cleveland) {
-      background-image: url('../../images/sufjan.jpg');
-    }
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/sufjan.jpg');
   }
 }
 
-#staves .bg {
+#staves {
   background-image: url('../../images/staves-sm.jpg');
 
   @media(min-width: $bp-cleveland) {
@@ -75,7 +67,7 @@ footer {
   }
 }
 
-#tame-impala .bg {
+#tame-impala {
   background-image: url('../../images/tame-impala-sm.jpg');
 
   @media(min-width: $bp-cleveland) {
@@ -83,7 +75,7 @@ footer {
   }
 }
 
-#umo .bg {
+#umo {
   background-image: url('../../images/umo-sm.jpg');
 
   @media(min-width: $bp-cleveland) {
@@ -91,7 +83,7 @@ footer {
   }
 }
 
-#courtney .bg {
+#courtney {
   background-image: url('../../images/courtney-sm.jpg');
 
   @media(min-width: $bp-cleveland) {
@@ -99,7 +91,7 @@ footer {
   }
 }
 
-#alabama-shakes .bg {
+#alabama-shakes {
   background-image: url('../../images/alabama-shakes-sm.jpg');
 
   @media(min-width: $bp-cleveland) {
@@ -107,7 +99,7 @@ footer {
   }
 }
 
-#hop-along .bg {
+#hop-along {
   background-image: url('../../images/hop-along-sm.jpg');
 
   @media(min-width: $bp-cleveland) {
@@ -115,7 +107,7 @@ footer {
   }
 }
 
-#julien .bg {
+#julien {
   background-image: url('../../images/julien-sm.jpg');
 
   @media(min-width: $bp-cleveland) {
@@ -123,8 +115,7 @@ footer {
   }
 }
 
-
-#speedy .bg {
+#speedy {
   background-image: url('../../images/speedy-sm.jpg');
 
   @media(min-width: $bp-cleveland) {
@@ -133,12 +124,10 @@ footer {
 }
 
 #waxahatchee {
-  .bg {
-    background-image: url('../../images/waxahatchee-sm.jpg');
+  background-image: url('../../images/waxahatchee-sm.jpg');
 
-    @media(min-width: $bp-cleveland) {
-      background-image: url('../../images/waxahatchee.jpg');
-    }
+  @media(min-width: $bp-cleveland) {
+    background-image: url('../../images/waxahatchee.jpg');
   }
 }
 
@@ -281,8 +270,6 @@ i:nth-child(5) {
 }
 
 .js {
-  // overflow: hidden;
-
   header {
     position: fixed;
     width: 100%;
@@ -297,12 +284,13 @@ i:nth-child(5) {
     top: 0;
     left: 0;
     z-index: 2;
+    clip: rect(0, auto, auto, 0);
   }
 
   .content {
     bottom: 100%;
     position: fixed;
-    // backface-visibility: hidden;
-    // transform: translateZ(0);
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 }
