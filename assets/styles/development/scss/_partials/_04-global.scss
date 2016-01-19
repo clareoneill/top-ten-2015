@@ -30,6 +30,8 @@ header {
 }
 
 section {
+  background-size: cover;
+  
   &::after {
     content: '';
     position: absolute;
