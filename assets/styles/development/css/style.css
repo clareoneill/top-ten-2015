@@ -157,29 +157,6 @@ a:focus {
 * {
   box-sizing: border-box; }
 
-body {
-  overflow: hidden;
-  -webkit-animation-name: unlock;
-  animation-name: unlock;
-  -webkit-animation-duration: 0;
-  animation-duration: 0;
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-
-@-webkit-keyframes unlock {
-  from {
-    overflow: hidden; }
-  to {
-    overflow: auto; } }
-
-@keyframes unlock {
-  from {
-    overflow: hidden; }
-  to {
-    overflow: auto; } }
-
 section,
 header,
 footer
@@ -199,23 +176,7 @@ footer {
   overflow: hidden; }
 
 header {
-  background-color: #000;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0; }
-
-section,
-footer {
-  opacity: 0;
-  -webkit-animation-name: fadein;
-  animation-name: fadein;
-  -webkit-animation-duration: 300ms;
-  animation-duration: 300ms;
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
+  background-color: #000; }
 
 section .bg {
   background-size: cover;
@@ -294,13 +255,11 @@ footer {
     #speedy .bg {
       background-image: url("../../images/speedy.jpg"); } }
 
-#waxahatchee {
-  margin-top: 100vh; }
-  #waxahatchee .bg {
-    background-image: url("../../images/waxahatchee-sm.jpg"); }
-    @media (min-width: 480px) {
-      #waxahatchee .bg {
-        background-image: url("../../images/waxahatchee.jpg"); } }
+#waxahatchee .bg {
+  background-image: url("../../images/waxahatchee-sm.jpg"); }
+  @media (min-width: 480px) {
+    #waxahatchee .bg {
+      background-image: url("../../images/waxahatchee.jpg"); } }
 
 .header-content,
 .footer-content {
@@ -310,18 +269,7 @@ footer {
   left: 50%;
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  -webkit-animation-name: fadein;
-  animation-name: fadein;
-  -webkit-animation-duration: 300ms;
-  animation-duration: 300ms;
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-
-.header-content {
-  opacity: 0; }
+  transform: translateX(-50%) translateY(-50%); }
 
 .content {
   position: absolute;
@@ -370,18 +318,7 @@ footer {
   left: 50%;
   top: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  transition: all 800ms ease;
-  -webkit-animation-name: loading;
-  animation-name: loading;
-  -webkit-animation-duration: 300ms;
-  animation-duration: 300ms;
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards; }
-  .loading.hide {
-    opacity: 0; }
+  transform: translateX(-50%) translateY(-50%); }
   .loading div {
     width: 66px;
     height: 40px;
@@ -395,18 +332,6 @@ footer {
     width: 10px;
     height: 40px;
     background: #fff; }
-
-@-webkit-keyframes loading {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-
-@keyframes loading {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
 
 i:nth-child(1) {
   -webkit-animation: bump01 2s ease-out infinite;
@@ -548,17 +473,11 @@ i:nth-child(5) {
   98% {
     top: 0; } }
 
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-
-@keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+.js header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
 
 .js section,
 .js footer {
@@ -569,12 +488,5 @@ i:nth-child(5) {
   z-index: 2; }
 
 .js .content {
-  bottom: 50%;
-  position: fixed;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0); }
-
-.js #waxahatchee {
-  margin-top: 0; }
+  bottom: 100%;
+  position: fixed; }
