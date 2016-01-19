@@ -4,19 +4,6 @@
 	box-sizing: border-box;
 }
 
-body {
-  overflow: hidden;
-  animation-name: unlock;
-  animation-duration: 0;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes unlock {
-  from { overflow: hidden; }
-  to { overflow: auto; }
-}
-
 section,
 header,
 footer
@@ -40,19 +27,6 @@ footer {
 
 header {
   background-color: #000;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-
-section,
-footer {
-  opacity: 0;
-  animation-name: fadein;
-  animation-duration: 300ms;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
 }
 
 section .bg {
@@ -158,8 +132,6 @@ footer {
 }
 
 #waxahatchee {
-  margin-top: 100vh;
-
   .bg {
     background-image: url('../../images/waxahatchee-sm.jpg');
 
@@ -177,14 +149,6 @@ footer {
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  animation-name: fadein;
-  animation-duration: 300ms;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
-}
-
-.header-content {
-  opacity: 0;
 }
 
 .content {
@@ -243,15 +207,6 @@ footer {
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  transition: all 800ms ease;
-  animation-name: loading;
-  animation-duration: 300ms;
-  animation-delay: 3s;
-  animation-fill-mode: forwards;
-
-  &.hide {
-    opacity: 0;
-  }
 
   div {
     width: 66px;
@@ -268,11 +223,6 @@ footer {
     height: 40px;
     background: #fff;
   }
-}
-
-@keyframes loading {
-  from { opacity: 1; }
-  to { opacity: 0; }
 }
 
 i:nth-child(1) {
@@ -329,14 +279,16 @@ i:nth-child(5) {
   98% { top: 0; }
 }
 
-
-@keyframes fadein {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-
 .js {
+  // overflow: hidden;
+
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
   section,
   footer {
     position: absolute;
@@ -347,13 +299,9 @@ i:nth-child(5) {
   }
 
   .content {
-    bottom: 50%;
+    bottom: 100%;
     position: fixed;
-    backface-visibility: hidden;
-    transform: translateZ(0);
-  }
-
-  #waxahatchee {
-    margin-top: 0;
+    // backface-visibility: hidden;
+    // transform: translateZ(0);
   }
 }
